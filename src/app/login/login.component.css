@@ -1,0 +1,41 @@
+.bk{
+    height: 490px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+      
+}
+.container
+{ 
+   margin: auto;
+   width: 40%;
+   border:3px salmon;
+   padding: 10px; 
+   position: absolute;
+   top:50%;
+   left:50%; 
+   transform: translate(-50%,-50%);
+}
+.headline
+{
+    color: aqua;
+    font-weight: bolder;
+    margin-top: 78px;
+}
+.form-group
+{
+    color: cyan;
+}
+
+.checkbox
+{
+    color: cyan;
+}
+
+.right
+{
+    color: cyan;
+  
+    float: right;
+    
+}

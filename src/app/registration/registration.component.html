@@ -1,0 +1,70 @@
+<div class="bk">
+  <div class="container">
+    <h2>Registration form</h2>
+    <form  (ngSubmit)="registerUser()">
+      <small class="text-danger">{{msg}}</small>
+      <div class="form-group" >
+        <label for="username">Username:</label>
+        <input type="username" class="form-control" id="username" placeholder="Enter username" name="username" 
+        required  [(ngModel)]="user.username">
+       
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter Age" name="age" required [(ngModel)]="user.age"  >
+        </div>
+        <div class="form-group" >
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="female" [(ngModel)]="user.gender">
+            <label class="form-check-label" for="flexRadioDefault1">
+               Female
+            </label>
+          </div>
+          <div class="form-group" >
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="male" checked [(ngModel)]="user.gender">
+            <label class="form-check-label" for="flexRadioDefault2">
+              Male
+            </label>
+        </div>
+
+        <div class="custom-control custom-checkbox" [(ngModel)]="user.hobbies">  
+             
+            <h4> Select Hobbies </h4>  
+            <input type="checkbox" id="customCheckbox2" name="customCheck" class="custom-control-input" >
+            <label class="custom-control-label" for="customCheckbox"> Singing </label>  
+          </div>  
+          <div class="custom-control custom-checkbox">  
+            <input type="checkbox" id="customCheckbox2" name="customCheck" class="custom-control-input" >  
+            <label class="custom-control-label" for="customCheckbox2"> dancing </label>  
+          </div>  
+          <div class="custom-control custom-checkbox">  
+            <input type="checkbox" id="customCheckbox2" name="customCheck" class="custom-control-input" >  
+            <label class="custom-control-label" for="customCheckbox2"> Sleeping </label>  
+          </div>  
+          <div class="custom-control custom-checkbox">  
+            <input type="checkbox" id="customCheckbox2" name="customCheck" class="custom-control-input" checked>  
+            <label class="custom-control-label" for="customCheckbox2"> Eating </label>  
+          </div>
+          
+
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd"  
+         pattern="^[a-z][A-Z][0-9]{5,10}$" [(ngModel)]="user.password"
+         required>
+      
+   <!-- <div *ngIf="password.errors && (password.invalid && password.touched)">
+            <small class="text-danger" *ngIf="password.errors.required">Password is required field</small>
+            <small class="text-danger" *ngIf="password.errors">Enter valid Password must contain alpha,numeric and special character</small>
+
+    </div> -->
+    </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-info">Register</button>
+    </form>
+   
+  </div>
+</div>

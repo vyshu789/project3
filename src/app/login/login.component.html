@@ -1,0 +1,34 @@
+<div class="bk">
+  <img src="https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000">
+<div class="container">
+    <h2 class="headline">Player Auctions</h2>
+    <form #loginform="ngForm" (ngSubmit)="loginUser()">
+        <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="username" class="form-control" id="username" placeholder="Enter username" name="username" [(ngModel)]="user.username" 
+        required  #username="ngModel" [class.is-invalid]="username.invalid && username.touched">
+        <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required field</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" [(ngModel)]="user.password" 
+         required #password="ngModel" [class.is-invalid]="password.invalid && password.touched">
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required field</small>
+      </div>
+   <!-- <div *ngIf="password.errors && (password.invalid && password.touched)" pattern="^[a-z][A-Z][0-9]{5,10}$" >
+            <small class="text-danger" *ngIf="password.errors.required">Password is required field</small>
+            <small class="text-danger" *ngIf="password.errors.pattern">Enter valid Password must contain alpha,numeric and special character</small>
+
+    </div> -->
+  
+    
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-info">Login</button>
+    </form>
+    <small class="right" [routerLink]="['/registration']">New User ? Register here</small>
+    
+  </div>
+</div>
